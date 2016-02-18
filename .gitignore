@@ -1,4 +1,6 @@
-css/base
-css/bourbon
-css/neat
+css/base/
+css/bourbon/
+css/neat/
 *.map
+node_modules/
+package.json
