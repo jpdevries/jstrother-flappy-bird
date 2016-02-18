@@ -3,4 +3,3 @@ site/css/bourbon/
 site/css/neat/
 *.map
 node_modules/
-package.json
