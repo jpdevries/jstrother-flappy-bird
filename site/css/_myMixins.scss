@@ -1,0 +1,5 @@
+@mixin screenMQ($breakpoint) {
+    @media only screen and ($breakpoint) {
+        @content;
+    }
+}

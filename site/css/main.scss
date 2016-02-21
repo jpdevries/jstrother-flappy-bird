@@ -10,7 +10,9 @@
     border: 1px solid blue;
 }
 header {
-    height: $headerFooterHeight;
+    @include screenMQ($gtDesktop) {
+        height: $headerFooterHeight;
+    }
     background: $headerColor;
 }
 main {
@@ -28,7 +30,6 @@ main {
     }
     .title {
         font-family: comicBalloon;
-        // font-size: ;
     }
     .button-left {
         margin-right: 7em;
