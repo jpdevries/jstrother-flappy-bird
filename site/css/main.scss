@@ -1,3 +1,43 @@
+@import 'normalize';
+@import 'bourbon/bourbon';
+@import 'base/base';
+@import 'neat/neat';
+@import 'myVariables';
+@import 'myFunctions';
+@import 'myFonts';
+
 * {
     border: 1px solid blue;
+}
+header {
+    height: $headerFooterHeight;
+    background: $headerColor;
+}
+main {
+    height: em(431);
+    background: url('../img/flappy-background.png') repeat-x;
+    section {
+        @include span-columns(8);
+        @include shift(2);
+        margin-top: 8em;
+        color: white;
+        text-align: center;
+    }
+    #game, #over {
+        display: none;
+    }
+    .title {
+        font-family: comicBalloon;
+        // font-size: ;
+    }
+    .button-left {
+        margin-right: 7em;
+    }
+    .button-right {
+        margin-left: 3em;
+    }
+}
+footer {
+    height: $headerFooterHeight;
+    background: $footerColor;
 }

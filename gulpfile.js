@@ -10,6 +10,7 @@ var concat = require("gulp-concat");
 var rename = require("gulp-rename");
 var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
+var autoprefixer = require("gulp-autoprefixer");
 
 // JS Linter
 gulp.task('jshint', function() {
@@ -55,6 +56,7 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
     return gulp.src('site/css/*.css')
     .pipe(concat('main.css'))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('build/css'));
 });
 
