@@ -449,6 +449,7 @@ ul, ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
 dl {
   margin-bottom: 0.75em; }
   dl dt {
@@ -539,12 +540,13 @@ h6 {
 @font-face {
   font-family: comicBalloon;
   src: url(../font/comic.ttf); }
+
 * {
   border: 1px solid blue; }
 
 header {
   background: #078CFD; }
-  @media only screen and (min-width 61.9375em 12) {
+  @media screen and (min-width: 61.9375em) {
     header {
       height: 6.5em; } }
 
@@ -574,5 +576,3 @@ main {
 footer {
   height: 6.5em;
   background: #5EE270; }
-
-/*# sourceMappingURL=main.css.map */

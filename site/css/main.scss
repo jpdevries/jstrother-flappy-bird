@@ -10,7 +10,7 @@
     border: 1px solid blue;
 }
 header {
-    @include screenMQ($gtDesktop) {
+    @include media($gtDesktop) {
         height: $headerFooterHeight;
     }
     background: $headerColor;
