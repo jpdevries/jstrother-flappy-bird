@@ -7,8 +7,11 @@ $gtCinema: min-width em(1401) 12 !default;
 $iphoneP: max-width em(480) 4 !default;
 $gtiphoneP: min-width em(481) 4 !default;
 
-$mobile: max-width em(640) 4 !default;
-$gtMobile: min-width em(641) 12 !default;
+$mobileL: max-width em(640) 4 !default;
+$gtMobileL: min-width em(641) 12 !default;
+
+$mobileP: max-width em(360) 4 !default;
+$gtMobileP: max-width em(361) 12 !default;
 
 $tabletP: max-width em(768) 12 !default;
 $gtTabletP: min-width em(769) 12 !default;

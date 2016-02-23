@@ -9,19 +9,20 @@
 * {
     border: 1px solid blue;
 }
-header {
-    @include media($gtDesktop) {
-        height: $headerFooterHeight;
+body {
+    background: url('../img/flappy-background.png') repeat-x padding-box;
+    background-size: cover;
+    @include media($mobileL) {
+        background-size: 100% 130%;
     }
-    background: $headerColor;
 }
 main {
-    height: em(431);
-    background: url('../img/flappy-background.png') repeat-x;
+    margin: auto 0;
     section {
-        @include span-columns(8);
-        @include shift(2);
-        margin-top: 8em;
+        // use the following lines for desktop
+        // @include span-columns(8);
+        // @include shift(2);
+        margin-top: 7em;
         color: white;
         text-align: center;
     }
@@ -32,13 +33,9 @@ main {
         font-family: comicBalloon;
     }
     .button-left {
-        margin-right: 7em;
+    //     margin-right: 7em;
     }
     .button-right {
-        margin-left: 3em;
+    //     margin-left: 3em;
     }
-}
-footer {
-    height: $headerFooterHeight;
-    background: $footerColor;
 }

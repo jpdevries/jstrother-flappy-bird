@@ -544,35 +544,20 @@ h6 {
 * {
   border: 1px solid blue; }
 
-header {
-  background: #078CFD; }
-  @media screen and (min-width: 61.9375em) {
-    header {
-      height: 6.5em; } }
+body {
+  background: url("../img/flappy-background.png") repeat-x padding-box;
+  background-size: cover; }
+  @media screen and (max-width: 40em) {
+    body {
+      background-size: 100% 130%; } }
 
 main {
-  height: 26.9375em;
-  background: url("../img/flappy-background.png") repeat-x; }
+  margin: auto 0; }
   main section {
-    float: left;
-    display: block;
-    margin-right: 2.12766%;
-    width: 65.95745%;
-    margin-left: 17.02128%;
-    margin-top: 8em;
+    margin-top: 7em;
     color: white;
     text-align: center; }
-    main section:last-child {
-      margin-right: 0; }
   main #game, main #over {
     display: none; }
   main .title {
     font-family: comicBalloon; }
-  main .button-left {
-    margin-right: 7em; }
-  main .button-right {
-    margin-left: 3em; }
-
-footer {
-  height: 6.5em;
-  background: #5EE270; }
