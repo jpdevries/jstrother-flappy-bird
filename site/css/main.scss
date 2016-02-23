@@ -10,11 +10,15 @@
     border: 1px solid blue;
 }
 body {
-    background: url('../img/flappy-background.png') repeat-x padding-box;
-    background-size: cover;
     @include media($mobileL) {
         background-size: 100% 130%;
     }
+    @include media($tabletP) {
+        h1 {
+            font-size: $base-font-size * 9;
+        }
+    }
+    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
 }
 main {
     margin: auto 0;

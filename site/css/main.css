@@ -545,11 +545,13 @@ h6 {
   border: 1px solid blue; }
 
 body {
-  background: url("../img/flappy-background.png") repeat-x padding-box;
-  background-size: cover; }
+  background: url("../img/flappy-background.png") center center/cover repeat-x fixed; }
   @media screen and (max-width: 40em) {
     body {
       background-size: 100% 130%; } }
+  @media screen and (max-width: 48em) {
+    body h1 {
+      font-size: 9em; } }
 
 main {
   margin: auto 0; }
