@@ -10,15 +10,29 @@
     border: 1px solid blue;
 }
 body {
+    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
     @include media($mobileL) {
+        // This block is somehow being affected by one of the two below. Not sure how or why...
         background-size: 100% 130%;
+        padding-top: 0;
+        h1 {
+            margin-top: 0;
+        }
     }
     @include media($tabletP) {
         h1 {
-            font-size: $base-font-size * 9;
+            font-size: $base-font-size * 5;
+        }
+        button {
+            font-size: $base-font-size * 2;
         }
     }
-    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
+    @include media($tabletL){
+        background-size: 100% 100%;
+        h1 {
+            margin-top: 2em;
+        }
+    }
 }
 main {
     margin: auto 0;
