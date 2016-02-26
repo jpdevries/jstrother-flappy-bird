@@ -11,6 +11,7 @@ var rename = require("gulp-rename");
 var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
 var autoprefixer = require("gulp-autoprefixer");
+var sourcemaps = require("gulp-sourcemaps");
 
 // JS Linter
 gulp.task('jshint', function() {
@@ -22,7 +23,9 @@ gulp.task('jshint', function() {
 // SASS Compiling
 gulp.task('sass', function() {
     return gulp.src('site/css/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('site/css'));
 });
 

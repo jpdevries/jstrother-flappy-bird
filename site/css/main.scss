@@ -12,7 +12,6 @@
 body {
     background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
     @include media($mobileL) {
-        // This block is somehow being affected by one of the two below. Not sure how or why...
         background-size: 100% 130%;
         padding-top: 0;
         h1 {
@@ -31,6 +30,25 @@ body {
         background-size: 100% 100%;
         h1 {
             margin-top: 2em;
+        }
+    }
+    @include media($lrgTabletP) {
+        h1 {
+            margin-top: 3.5em !important;
+            font-size: $base-font-size * 12;
+        }
+        button {
+            font-size: $base-font-size * 6;
+        }
+    }
+    @include media($lrgTabletL) {
+        background-size: 100% 100%;
+        h1 {
+            margin-top: 1.5em;
+            font-size: $base-font-size * 12;
+        }
+        button {
+            font-size: $base-font-size * 4;
         }
     }
 }
