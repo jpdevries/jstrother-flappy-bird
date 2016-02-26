@@ -10,57 +10,39 @@
     border: 1px solid blue;
 }
 body {
-    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
-    @include media($mobileL) {
+    @include media($gtiphoneP) {
         background-size: 100% 130%;
-        padding-top: 0;
-        h1 {
-            margin-top: 0;
-        }
     }
-    @include media($tabletP) {
-        h1 {
-            font-size: $base-font-size * 5;
-        }
-        button {
-            font-size: $base-font-size * 2;
-        }
-    }
-    @include media($tabletL){
-        background-size: 100% 100%;
-        h1 {
-            margin-top: 2em;
-        }
-    }
-    @include media($lrgTabletP) {
-        h1 {
-            margin-top: 3.5em !important;
-            font-size: $base-font-size * 12;
-        }
-        button {
-            font-size: $base-font-size * 6;
-        }
-    }
-    @include media($lrgTabletL) {
-        background-size: 100% 100%;
-        h1 {
-            margin-top: 1.5em;
-            font-size: $base-font-size * 12;
-        }
-        button {
-            font-size: $base-font-size * 4;
-        }
-    }
+    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
 }
 main {
     margin: auto 0;
     section {
-        // use the following lines for desktop
-        // @include span-columns(8);
-        // @include shift(2);
-        margin-top: 7em;
+        @include media($gtiphoneP) {
+            h1 {
+                font-size: $base-font-size * 7;
+            }
+            button {
+                font-size: $base-font-size * 2;
+            }
+        }
+        @include media($gtMobileMidPoint) {
+            section {
+                padding-top: 0;
+            }
+            h1 {
+                font-size: $base-font-size * 5;
+                margin-top: 0;
+            }
+            button {
+                font-size: $base-font-size * 1.5;
+            }
+        }
         color: white;
         text-align: center;
+        h1 {
+            margin-top: 1.75em;
+        }
     }
     #game, #over {
         display: none;
@@ -69,9 +51,9 @@ main {
         font-family: comicBalloon;
     }
     .button-left {
-    //     margin-right: 7em;
+        
     }
     .button-right {
-    //     margin-left: 3em;
+        
     }
 }
