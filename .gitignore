@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-css/base
-css/bourbon
-css/neat
-<<<<<<< HEAD
-*.map
-=======
-*.map
->>>>>>> 07ab9304bfc8fe35493df233ff858fd2ca0db237
-=======
 site/css/base/
 site/css/bourbon/
 site/css/neat/
 *.map
 node_modules/
->>>>>>> c3092b89e09f9607118a60907d435975c3881de2
