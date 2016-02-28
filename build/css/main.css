@@ -601,8 +601,11 @@ main {
   main #game, main #over {
     display: none; }
   main .title {
-    font-family: comicBalloon; }
+    font-family: comicBalloon;
+    display: none; }
   main .button-left {
     margin-right: 1em; }
   main .button-right {
     margin-left: 1em; }
+  main #play-button, main #howTo-button {
+    display: none; }
