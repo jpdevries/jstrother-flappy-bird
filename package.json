@@ -1,0 +1,49 @@
+{
+  "name": "flappy-bird",
+  "version": "1.0.0",
+  "description": "A clone of the Flappy Bird game for a Thinkful class project",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstrother/flappy-bird.git"
+  },
+  "keywords": [
+    "flappy",
+    "bird"
+  ],
+  "author": "Jim Strother",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstrother/flappy-bird/issues"
+  },
+  "homepage": "https://github.com/jstrother/flappy-bird#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-bower": "0.0.13",
+    "gulp-clean-css": "^2.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^1.5.2",
+    "jshint": "^2.9.1",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "node-refills": "^1.0.1",
+    "postcss-cli": "^2.5.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
