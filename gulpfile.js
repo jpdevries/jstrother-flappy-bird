@@ -12,6 +12,8 @@ var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
 var autoprefixer = require("gulp-autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
+var sync = require("gulp-sync");
+var cssmin = require("gulp-clean-css");
 
 // JS Linter
 gulp.task('jshint', function() {

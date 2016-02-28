@@ -10,14 +10,19 @@
     border: 1px solid blue;
 }
 body {
+    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
     @include media($gtiphoneP) {
         background-size: 100% 130%;
     }
-    background: url('../img/flappy-background.png') center center / cover repeat-x fixed;
 }
 main {
     margin: auto 0;
     section {
+        color: white;
+        text-align: center;
+        h1 {
+            margin-top: 1.75em;
+        }
         @include media($gtiphoneP) {
             h1 {
                 font-size: $base-font-size * 7;
@@ -26,22 +31,14 @@ main {
                 font-size: $base-font-size * 2;
             }
         }
-        @include media($gtMobileMidPoint) {
-            section {
-                padding-top: 0;
-            }
+        @include media($gtMobile) {
             h1 {
                 font-size: $base-font-size * 5;
-                margin-top: 0;
+                margin-top: 1em;
             }
             button {
                 font-size: $base-font-size * 1.5;
             }
-        }
-        color: white;
-        text-align: center;
-        h1 {
-            margin-top: 1.75em;
         }
     }
     #game, #over {
