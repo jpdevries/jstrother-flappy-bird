@@ -73,11 +73,15 @@ main {
     }
     .title {
         font-family: comicBalloon;
+        display: none;
     }
     .button-left {
         margin-right: 1em;
     }
     .button-right {
         margin-left: 1em;
+    }
+    #play-button, #howTo-button {
+        display: none;
     }
 }
