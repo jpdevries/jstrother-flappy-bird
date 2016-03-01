@@ -73,7 +73,9 @@ main {
     }
     .title {
         font-family: comicBalloon;
-        display: none;
+    }
+    #bird {
+        transform: translateY(-100vh);
     }
     .button-left {
         margin-right: 1em;

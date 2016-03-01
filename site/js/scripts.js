@@ -1,7 +1,6 @@
 $(function() {
     $('#bird')
-        .css('display', 'block')
-        .velocity({ top: '-100%' }, { duration: 2500 });
+        .velocity({ translateY: "0vh" }, { duration: 10000 });
     $('#howTo-button')
         .css('display', 'inline')
         .velocity('transition.slideLeftIn', { duration: 2500 });
