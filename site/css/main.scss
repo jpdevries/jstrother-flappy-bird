@@ -75,7 +75,9 @@ main {
         font-family: comicBalloon;
     }
     #bird {
-        transform: translateY(-100vh);
+        transform: translateY(0);
+        padding:0.5em 0;
+        visibility:hidden;
     }
     .button-left {
         margin-right: 1em;
