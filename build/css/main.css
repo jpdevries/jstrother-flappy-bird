@@ -553,9 +553,6 @@ h6 {
   font-family: comicBalloon;
   src: url(../font/comic.ttf); }
 
-* {
-  border: 1px solid blue; }
-
 body {
   background: url("../img/flappy-background.png") center center/cover repeat-x fixed; }
   @media screen and (min-width: 30.0625em) {
@@ -601,8 +598,10 @@ main {
   main #game, main #over {
     display: none; }
   main .title {
-    font-family: comicBalloon;
-    display: none; }
+    font-family: comicBalloon; }
+  main #bird {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh); }
   main .button-left {
     margin-right: 1em; }
   main .button-right {
