@@ -1,9 +1,9 @@
 $(function() {
     $('#bird').velocity({ translateY: "-100vh" },0,function(){
-          $('#bird').css({visibility:'visible'}).velocity({ translateY: "0" },{duration:1000, easing:'ease-out'});
+          $('#bird').css({visibility:'visible'}).velocity({ translateY: "0" },{duration:2500, easing:'ease-out'});
     });
     $('#howTo-button')
-        .velocity('transition.slideLeftIn', { duration: 2500 });
+        .velocity('transition.slideLeftIn', { duration: 3500 });
     $('#play-button')
-        .velocity('transition.slideRightIn', { duration: 2500 });
+        .velocity('transition.slideRightIn', { duration: 3500 });
 });
