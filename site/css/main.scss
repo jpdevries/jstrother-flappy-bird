@@ -73,6 +73,7 @@ main {
     }
     .title {
         font-family: comicBalloon;
+        padding: 0.25em auto;
     }
     #bird {
         transform: translateY(-100vh);
@@ -82,8 +83,5 @@ main {
     }
     .button-right {
         margin-left: 1em;
-    }
-    #play-button, #howTo-button {
-        display: none;
     }
 }
