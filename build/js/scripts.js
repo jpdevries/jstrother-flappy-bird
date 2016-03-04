@@ -1,1 +1,12 @@
-!function t(r,i,n){function e(u,a){if(!i[u]){if(!r[u]){var f="function"==typeof require&&require;if(!a&&f)return f(u,!0);if(o)return o(u,!0);var s=new Error("Cannot find module '"+u+"'");throw s.code="MODULE_NOT_FOUND",s}var c=i[u]={exports:{}};r[u][0].call(c.exports,function(t){var i=r[u][1][t];return e(i?i:t)},c,c.exports,t,r,i,n)}return i[u].exports}for(var o="function"==typeof require&&require,u=0;u<n.length;u++)e(n[u]);return e}({1:[function(t,r,i){$(function(){$("#bird").velocity({translateY:"-100vh"},0,function(){$("#bird").css({visibility:"visible"}).velocity({translateY:"0"},{duration:2500,easing:"ease-out"})}),$("#howTo-button").velocity("transition.slideLeftIn",{duration:3500}),$("#play-button").velocity("transition.slideRightIn",{duration:3500})})},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$(function() {
+    $('#bird').velocity({ translateY: "-100vh" },0,function(){
+          $('#bird').css({visibility:'visible'}).velocity({ translateY: "0" },{duration:2500, easing:'ease-out'});
+    });
+    $('#howTo-button')
+        .velocity('transition.slideLeftIn', { duration: 3500 });
+    $('#play-button')
+        .velocity('transition.slideRightIn', { duration: 3500 });
+});
+
+},{}]},{},[1]);
