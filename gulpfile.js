@@ -1,3 +1,8 @@
+/*
+Install NPMs with following command:
+npm install --save-dev gulp gulp-jshint gulp-sass gulp-imagemin browserify gulp-uglify gulp-htmlmin gulp-concat gulp-rename vinyl-source-stream vinyl-buffer gulp-autoprefixer gulp-sourcemaps gulp-sync gulp-clean-css
+*/
+
 var gulp = require("gulp");
 
 var jshint = require("gulp-jshint");
@@ -62,6 +67,7 @@ gulp.task('styles', function() {
     return gulp.src('site/css/*.css')
     .pipe(concat('main.css'))
     .pipe(autoprefixer())
+    .pipe(cssmin())
     .pipe(gulp.dest('build/css'));
 });
 
