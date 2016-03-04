@@ -5,5 +5,16 @@ $(function() {
     $('#howTo-button')
         .velocity('transition.slideLeftIn', { duration: 3500 });
     $('#play-button')
-        .velocity('transition.slideRightIn', { duration: 3500 });
+        .velocity('transition.slideRightIn', { duration: 3500 })
+        .click(function () {
+            $('#intro').hide();
+            $('#game').show();
+        });
+    
+    var flappyBird = require("./flappy-bird");
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var app = new flappyBird.FlappyBird();
+        app.run();
+    });
 });
