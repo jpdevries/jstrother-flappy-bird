@@ -7,7 +7,7 @@ BirdGraphicsComponent.prototype.draw = function(context) {
     context.beginPath();
     context.arc(150, 215, 30, 0, 2 * Math.PI);
     context.fill();
-    context.beginPath();
+    // context.beginPath();
     context.fillRect(113, 50, 10, 40);
 };
 
