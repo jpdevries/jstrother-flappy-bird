@@ -3,8 +3,9 @@ var BirdGraphicsComponent = function(entity) {
 };
 
 BirdGraphicsComponent.prototype.draw = function(context) {
+    context.fillStyle = 'rgb(212, 144, 156)';
     context.beginPath();
-    context.arc(150, 115, 30, 0, 2 * Math.PI);
+    context.arc(150, 215, 30, 0, 2 * Math.PI);
     context.fill();
     context.beginPath();
     context.fillRect(113, 50, 10, 40);
