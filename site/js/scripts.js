@@ -14,7 +14,6 @@ $(function() {
 });
 // Scripts for game animation
     var flappyBird = require("./flappy-bird");
-    console.log(flappyBird);
     document.addEventListener('DOMContentLoaded', function() {
         var app = new flappyBird.FlappyBird();
         app.run();

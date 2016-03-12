@@ -4,7 +4,6 @@ var GraphicsSystem = function(entities) {
     this.context = this.canvas.getContext('2d');
 };
 GraphicsSystem.prototype.run = function() {
-    console.log("Running");
     window.requestAnimationFrame(this.tick.bind(this));
 };
 GraphicsSystem.prototype.tick = function() {
@@ -23,5 +22,6 @@ GraphicsSystem.prototype.tick = function() {
         }
         entity.components.graphics.draw(this.context);
     }
+    window.requestAnimationFrame(this.tick.bind(this));
 };
 exports.GraphicsSystem = GraphicsSystem;
