@@ -14,6 +14,8 @@ html, body {
 #main-canvas {
     width: 100%;
     height: 100%;
+    border: 5px solid red;
+    background-color: blue;
 }
 // body {
 //     background: url('../img/flappy-background.png') center center / cover repeat-x fixed;

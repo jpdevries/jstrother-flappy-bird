@@ -3,12 +3,14 @@ var BirdGraphicsComponent = function(entity) {
 };
 
 BirdGraphicsComponent.prototype.draw = function(context) {
-    context.fillStyle = 'rgb(212, 144, 156)';
+    var position = {x: 0, y: 0.5};
+    context.save();
+    context.translate(position.x, position.y);
     context.beginPath();
-    context.arc(150, 215, 30, 0, 2 * Math.PI);
+    context.arc(0, 0, 0.02, 0, 2 * Math.PI);
     context.fill();
-    // context.beginPath();
-    context.fillRect(113, 50, 10, 40);
+    context.closePath();
+    context.restore();
 };
 
 exports.BirdGraphicsComponent = BirdGraphicsComponent;
