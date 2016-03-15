@@ -48,6 +48,7 @@ PhysicsComponent.prototype.update = function(delta) {
     this.position.y += this.velocity.y * delta;
 };
 exports.PhysicsComponent = PhysicsComponent;
+
 },{}],4:[function(require,module,exports){
 var graphicsComponent = require("../components/graphics/bird");
 var physicsComponent = require("../components/physics/physics");
@@ -80,7 +81,7 @@ var bird = require('./entities/bird');
 var pipe = require('./entities/pipe');
 
 var FlappyBird = function() {
-    this.entities = [(new bird.Bird()), (new pipe.Pipe())];
+    this.entities = [new bird.Bird()];
     this.graphics = new graphicsSystem.GraphicsSystem(this.entities);
     this.physics = new physicsSystem.PhysicsSystem(this.entities);
     this.input = new inputSystem.InputSystem(this.entities);
@@ -93,8 +94,9 @@ FlappyBird.prototype.run = function() {
 };
 
 exports.FlappyBird = FlappyBird;
+
 },{"./entities/bird":4,"./entities/pipe":5,"./systems/graphics":8,"./systems/input":9,"./systems/physics":10}],7:[function(require,module,exports){
-$(function() {
+/*$(function() {
     // Velocity powering title animation
     $('#bird').velocity({ translateY: "-100vh" },0,function(){
           $('#bird').css({visibility:'visible'}).velocity({ translateY: "0" },{duration:2500, easing:'ease-out'});
@@ -107,13 +109,14 @@ $(function() {
             $('#intro').hide();
             $('#game').show();
         });
-});
+});*/
 // Scripts for game animation
     var flappyBird = require("./flappy-bird");
     document.addEventListener('DOMContentLoaded', function() {
         var app = new flappyBird.FlappyBird();
         app.run();
     });
+
 },{"./flappy-bird":6}],8:[function(require,module,exports){
 var GraphicsSystem = function(entities) {
     this.entities = entities;
@@ -162,19 +165,27 @@ exports.InputSystem = InputSystem;
 },{}],10:[function(require,module,exports){
 var PhysicsSystem = function(entities) {
     this.entities = entities;
+    this.interval = null;
 };
 PhysicsSystem.prototype.run = function() {
     // run the update loop
-    window.setInterval(this.tick.bind(this), 1000 / 60);
+    this.interval = window.setInterval(this.tick.bind(this), 1000 /60);
 };
 PhysicsSystem.prototype.tick = function() {
-    for (var i = 0; i < this.entities.length; i++) {
+    var time = new Date().getTime();
+    var delta = (time - this.time) / 1000;
+    this.time = time;
+
+    for (var i=0; i<this.entities.length; i++) {
         var entity = this.entities[i];
         if (!'physics' in entity.components) {
             continue;
         }
-        entity.components.physics.update(1 / 60);
+
+        entity.components.physics.update(1/60);
     }
+    //this.collisionSystem.tick();
 };
 exports.PhysicsSystem = PhysicsSystem;
+
 },{}]},{},[7]);
